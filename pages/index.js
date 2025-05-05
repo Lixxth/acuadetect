@@ -3,40 +3,50 @@ import { NextSeo } from "next-seo";
 import { Inter } from "next/font/google";
 import Button from "@/componentes/login-btn";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative min-h-screen bg-gradient-to-b from-white to-blue-100 overflow-hidden">
       <NextSeo
         title="Inicio | AquaDetect"
         description="Plataforma de monitoreo de fugas de agua"
         canonical="https://www.AquaDetect.com/"
       />
-      <div className="relative w-screen h-screen bg-white flex flex-col items-center justify-center">
+
+      {/* Contenido principal */}
+      <div className="flex flex-col items-center justify-center px-4 pt-16 pb-4 text-center relative z-10">
         <Image
-          src="/AcuaDetect.png"
+          src="/leakT.png"
           alt="Logo"
-          width={180}
-          height={180}
-          className="mb-5"
+          width={150}
+          height={150}
+          className="mb-6"
         />
-        <h1 className="text-xl font-bold text-center text-gray-600 z-10 mb-52 px-4">
-          Bienvenido a AquaDetect
+        <h1 className="text-2xl font-bold text-gray-700 leading-relaxed mb-6">
+          Bienvenido a <span className="text-blue-600">LeakTracking</span>
           <br />
-          tu ayudante en fugas de agua,
-          <br/> 
-          Unete a la comunidad
+          Tu ayudante en fugas de agua
         </h1>
-        <div
-          className="absolute bottom-0 w-full h-72 bg-cover bg-bottom"
+        <p className="text-gray-500 mb-10 max-w-md">
+          Únete a la comunidad, monitorea tu consumo y <strong>ahorra agua y dinero</strong>.
+        </p>
+      </div>
+
+      {/* Fondo de olas */}
+      <div
+          className="w-full h-64 bg-cover bg-bottom pointer-events-none"
           style={{ backgroundImage: "url('/imagenesbg/Olas.png')" }}
         >
            <div className="flex justify-center items-center h-full">
-            <Button />
+           
             </div>
         </div>
+
+      {/* Botón encima del fondo */}
+      <div className="absolute bottom-24 w-full flex justify-center items-center z-20 px-4 ">
+        <Button />
+
       </div>
     </main>
   );

@@ -12,29 +12,29 @@ export default function Button() {
     setIsClient(true);
   }, []);
 
-  if (!isClient) {
-    return null;
-  }
+  if (!isClient) return null;
 
   if (status === "loading") {
-    return <p>Cargando...</p>;
+    return <p className="text-center text-gray-600">Cargando...</p>;
   }
 
   if (session) {
     return (
-      <div className="flex flex-col justify-center z-50">
-        <span className="text-lg mb-2 ml-1 font-bold text-center">
-          Iniciaste sesión como: {session.user.email}
+      <div className="flex flex-col items-center z-50 space-y-3 px-4 w-full max-w-xs sm:max-w-sm">
+        <span className="text-center text-base sm:text-lg font-semibold text-gray-700">
+          Iniciaste sesión como:
+          <br />
+          <span className="text-blue-600 break-all">{session.user.email}</span>
         </span>
         <button
           onClick={() => router.push("/inicio")}
-          className="px-6 py-2 font-bold rounded bg-blue-500 text-white hover:bg-blue-600 transition duration-200 z-50"
+          className="w-full px-6 py-3 rounded-full bg-blue-600 text-white font-bold hover:bg-blue-700 transition duration-200 shadow-md"
         >
           Ir a Inicio
         </button>
         <button
           onClick={() => signOut()}
-          className="px-6 py-2 font-bold rounded bg-red-500 text-white hover:bg-red-600 transition duration-200 z-50 mt-2"
+          className="w-full px-6 py-3 rounded-full bg-red-500 text-white font-bold hover:bg-red-600 transition duration-200 shadow-md"
         >
           Cerrar Sesión
         </button>
@@ -43,14 +43,17 @@ export default function Button() {
   }
 
   return (
-    <div className="justify-center text-center z-50">
-      <p className="font-bold text-xl mb-2">¡Únete ya!</p>
+    <div className="flex flex-col items-center text-center z-50 space-y-6 px-4 w-full max-w-sm">
+     <p className="font-semibold text-xl sm:text-2xl text-white drop-shadow-lg mt-4">
+  ¡Únete a nuestra comunidad!
+</p>
+
       <button
         onClick={() => signIn("google")}
-        className="flex flex-row items-center h-10 w-36 p-2 font-bold rounded bg-blue-500 text-white hover:bg-blue-600 transition duration-200"
+        className="flex items-center justify-center px-6 py-4 w-full sm:w-64 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold shadow-lg hover:from-blue-600 hover:to-purple-700 transition duration-300 transform hover:scale-105"
       >
-        <FcGoogle className="mr-4" />
-        Inicia Sesión
+        {/* <FcGoogle className="text-2xl mr-3" /> */}
+        Inicia sesión con Google
       </button>
     </div>
   );
