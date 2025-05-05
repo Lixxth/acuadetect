@@ -3,11 +3,12 @@ import { NextSeo } from "next-seo";
 import { Inter } from "next/font/google";
 import Button from "@/componentes/login-btn";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-gradient-to-b from-white to-blue-100 overflow-hidden">
+    <main className={`${inter.className} relative min-h-screen bg-gradient-to-b from-white to-blue-100 overflow-hidden`}>
       <NextSeo
         title="Inicio | AquaDetect"
         description="Plataforma de monitoreo de fugas de agua"

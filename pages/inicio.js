@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Inicio() {
   return (
-    <main>
+    <main className={inter.className}>
       <NextSeo
         title="Tu pagina | AquaDetect"
         description="Plataforma de monitoreo de fugas de agua"
