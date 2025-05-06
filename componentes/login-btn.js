@@ -27,7 +27,7 @@ export default function Button() {
           <span className="text-blue-600 break-all">{session.user.email}</span>
         </span>
         <button
-          onClick={() => router.push("/inicio")}
+          onClick={() => router.push("/JuegosyConsejos")} 
           className="w-full px-6 py-3 rounded-full bg-blue-600 text-white font-bold hover:bg-blue-700 transition duration-200 shadow-md"
         >
           Ir a Inicio

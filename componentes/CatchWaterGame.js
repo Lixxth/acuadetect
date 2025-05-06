@@ -101,7 +101,7 @@ const CatchWaterGame = () => {
 
   // Función para regresar al menú principal
   const handleReturnToMenu = () => {
-    router.push('/home');
+    router.push('/JuegosyConsejos'); // Cambia la ruta según tu estructura de carpetas
   };
 
   // Limpiar intervalos al desmontar
@@ -114,22 +114,22 @@ const CatchWaterGame = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FFE5B4] flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen bg-[#ffffff] flex flex-col items-center justify-center p-4">
       <div className="text-center mb-4">
-        <h1 className="text-2xl md:text-3xl font-bold text-[#D6001C] mb-2">
-          ¡Atrapa las Papas!
+        <h1 className="text-2xl md:text-3xl font-bold text-[#181047] mb-2">
+          ¡Riega la planta!
         </h1>
         <div className="flex items-center justify-center gap-4">
           <div className="flex items-center gap-2">
-            <LuTrophy className="w-6 h-6 text-[#FFCC00]" /> {/* Reemplazo del ícono */}
-            <p className="text-lg md:text-xl font-bold text-[#FFCC00]">
+            <LuTrophy className="w-6 h-6 text-[#791e80]" /> {/* Reemplazo del ícono */}
+            <p className="text-lg md:text-xl font-bold text-[#23177e]">
               Puntos: {score}
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <LuClock className="w-6 h-6 text-[#FFCC00]" /> {/* Reemplazo del ícono */}
-            <p className="text-lg md:text-xl font-bold text-[#FFCC00]">
-              Tiempo: {timeLeft}s
+            <LuClock className="w-6 h-6 text-[#521257]" /> {/* Reemplazo del ícono */}
+            <p className="text-lg md:text-xl font-bold text-[#1a1976]">
+              Tiempo: {timeLeft} s
             </p>
           </div>
         </div>
@@ -173,26 +173,26 @@ const CatchWaterGame = () => {
         </div>
       ) : gameOver ? (
         <div className="text-center w-full max-w-md">
-          <h2 className="text-xl md:text-2xl font-bold text-[#D6001C] mb-4">
+          <h2 className="text-xl md:text-2xl font-bold text-[#101047] mb-4">
             ¡Juego Terminado!
           </h2>
           <p className="text-lg md:text-xl mb-4">Puntuación final: {score}</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <button
               onClick={showRewardScreen}
-              className="w-full md:w-auto bg-[#FFCC00] text-[#D6001C] font-bold py-3 px-8 rounded-lg hover:bg-[#FFD700] transition-colors flex items-center justify-center gap-2"
+              className="w-full md:w-auto bg-[#0d581f] text-[#ffffff] font-bold py-3 px-8 rounded-lg hover:bg-[#4e7451] transition-colors flex items-center justify-center gap-2"
             >
               <LuTrophy className="w-5 h-5" /> {/* Reemplazo del ícono */}
               Ver Recompensa
             </button>
             <button
               onClick={handleReturnToMenu}
-              className="w-full md:w-auto bg-[#D6001C] text-white font-bold py-3 px-8 rounded-lg hover:bg-[#B30000] transition-colors flex items-center justify-center gap-2"
+              className="w-full md:w-auto bg-[#3a51ff] text-[#ffffff] font-bold py-3 px-8 rounded-lg hover:bg-[#0e1354] transition-colors flex items-center justify-center gap-2"
             >
               <LuArrowLeft className="w-5 h-5" /> {/* Reemplazo del ícono */}
               Regresar al menú
             </button>
-          </div>
+          </div>           
         </div>
       ) : (
         <div
@@ -221,7 +221,7 @@ const CatchWaterGame = () => {
               }}
             >
               <Image
-                src="/Juegos/papa-removebg-preview.png"
+                src="/Juegos/Gota-removebg-preview.png"
                 alt="Papas fritas"
                 width={32}
                 height={32}
@@ -239,7 +239,7 @@ const CatchWaterGame = () => {
             }}
           >
             <Image
-              src="/Juegos/cajamc-removebg-preview.png"
+              src="/Juegos/maceta-removebg-preview.png"
               alt="Caja de McDonald's"
               width={128}
               height={128}
@@ -251,7 +251,7 @@ const CatchWaterGame = () => {
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
               <button
                 onClick={startGame}
-                className="bg-[#FFCC00] text-[#D6001C] font-bold py-3 px-8 rounded-lg hover:bg-[#FFD700] transition-colors"
+                className="bg-[#3a51ff] text-[#ffffff] font-bold py-3 px-8 rounded-lg hover:bg-[#0e1354] transition-colors"
               >
                 ¡Comenzar!
               </button>

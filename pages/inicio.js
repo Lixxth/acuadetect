@@ -5,6 +5,7 @@ import { PlusCircleIcon, DropletIcon, HomeIcon, BarChart2Icon, UserIcon } from "
 import { useState } from "react"; // Asegúrate de importar useState para manejar el estado
 import Progress from './Progress'; // Componente de progreso, si no lo tienes, lo definimos abajo
 import Link from 'next/link'; // Importamos Link para la navegación
+import { GoFileDirectory } from "react-icons/go";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -119,8 +120,8 @@ export default function Inicio() {
         </Link>
         <Link href="/dispositivos" passHref>
           <button className="flex flex-col items-center py-1 px-3 text-gray-500 hover:bg-blue-50 rounded-lg transition-colors">
-            <DropletIcon className="w-6 h-6 mb-1" />
-            <span className="text-xs">Dispositivos</span>
+            <GoFileDirectory  className="w-6 h-6 mb-1" />
+            <span className="text-xs">Directorio</span>
           </button>
         </Link>
         <Link href="/perfil" passHref>

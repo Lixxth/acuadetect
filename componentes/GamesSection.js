@@ -7,17 +7,17 @@ const GamesSection = () => {
   const games = [
     {
       id: 1,
-      title: 'Atrapa las Papas',
-      description: 'Atrapa las papas fritas en la caja de McDonald\'s',
-      image: '/Juegos/atrapapaps.png',
-      path: '/games/catch-fries'
+      title: 'Riega la planta',
+      description: 'Riega la planta con agua y evita que se desperdicie',
+      image: '/Juegos/Atrapaagua.png',
+      path: '/games/CatchWaterGames'
     },
     {
       id: 2,
-      title: 'McQuiz',
+      title: 'Que te atrape el agua',
       description: 'Pon a prueba tus conocimientos',
-      image: '/Juegos/atrapapaps.png',
-      path: '/games/quiz'
+      image: '/Juegos/Quesabesagua.png',
+      path: '/games/McQuiz'
     }
   ];
 
@@ -40,7 +40,7 @@ const GamesSection = () => {
               />
             </div>
             <div className="p-4">
-              <h3 className="text-xl font-bold text-[#D6001C]">{game.title}</h3>
+              <h3 className="text-xl font-bold text-[#1b267a]">{game.title}</h3>
               <p className="text-gray-600">{game.description}</p>
             </div>
           </Link>

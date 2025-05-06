@@ -6,7 +6,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import GameAccessModal from "./GameAccessModal";
 import GamesSection from "./GamesSection";
-import { FaHome, FaChartBar, FaTachometerAlt, FaUser } from "react-icons/fa"; // Importa los íconos desde react-icons
+import { PlusCircleIcon, DropletIcon, HomeIcon, BarChart2Icon, UserIcon } from "lucide-react"; // Si usas 'lucide-react' para los iconos
+import { GoFileDirectory } from "react-icons/go";
 
 const HomeScreen = () => {
   const { data: session } = useSession();
@@ -129,27 +130,25 @@ const HomeScreen = () => {
       <nav className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 flex justify-around py-2 px-2 shadow-lg z-50 sm:flex-col sm:space-y-3 sm:py-4">
         <Link href="/inicio" passHref>
           <button className="flex flex-col items-center py-1 px-3 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors">
-            <FaHome className="w-6 h-6 mb-1" /> {/* Ícono Home */}
+            <HomeIcon className="w-6 h-6 mb-1" />
             <span className="text-xs font-medium">Inicio</span>
           </button>
         </Link>
         <Link href="/JuegosyConsejos" passHref>
           <button className="flex flex-col items-center py-1 px-3 text-gray-500 hover:bg-blue-50 rounded-lg transition-colors">
-            <FaChartBar className="w-6 h-6 mb-1" />{" "}
-            {/* Ícono Juegos y Consejos */}
+            <BarChart2Icon className="w-6 h-6 mb-1" />
             <span className="text-xs">Juegos y Consejos</span>
           </button>
         </Link>
         <Link href="/dispositivos" passHref>
           <button className="flex flex-col items-center py-1 px-3 text-gray-500 hover:bg-blue-50 rounded-lg transition-colors">
-            <FaTachometerAlt className="w-6 h-6 mb-1" />{" "}
-            {/* Ícono Dispositivos */}
-            <span className="text-xs">Dispositivos</span>
+            <GoFileDirectory  className="w-6 h-6 mb-1" />
+            <span className="text-xs">Directorio</span>
           </button>
         </Link>
         <Link href="/perfil" passHref>
           <button className="flex flex-col items-center py-1 px-3 text-gray-500 hover:bg-blue-50 rounded-lg transition-colors">
-            <FaUser className="w-6 h-6 mb-1" /> {/* Ícono Perfil */}
+            <UserIcon className="w-6 h-6 mb-1" />
             <span className="text-xs">Perfil</span>
           </button>
         </Link>
