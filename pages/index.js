@@ -2,6 +2,7 @@ import Image from "next/image";
 import { NextSeo } from "next-seo";
 import { Inter } from "next/font/google";
 import Button from "@/componentes/login-btn";
+import OfflineButton from "@/componentes/OfflineButton";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -45,10 +46,13 @@ export default function Home() {
         </div>
 
       {/* Botón encima del fondo */}
-      <div className="absolute bottom-24 w-full flex justify-center items-center z-20 px-4 ">
+      <div className="absolute flex-col bottom-24 w-full flex justify-center items-center z-20 px-4 mt-2 ">
         <Button />
+        <OfflineButton />
+       
 
       </div>
+      
     </main>
   );
 }

@@ -47,7 +47,7 @@ const OfflineButton = () => {
   };
 
   return (
-    <div className="promotionbanner bg-[#fff] w-full flex justify-center items-center text-black">
+    <div className="promotionbanner mt-4 bg-transparent w-full flex justify-center items-center text-black">
       {showInstallButton && (
         <button
         className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105" 

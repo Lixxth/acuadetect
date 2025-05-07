@@ -108,7 +108,7 @@ const ProfileScreen = () => {
           </h3>
           <div className="space-y-4">
             <Link
-              href="/profile/preferences"
+              href="/en-desarrollo"
               className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100"
             >
               <div className="flex items-center space-x-3">
@@ -118,7 +118,7 @@ const ProfileScreen = () => {
               <span className="text-gray-400">→</span>
             </Link>
             <Link
-              href="/profile/rewards"
+              href="/en-desarrollo"
               className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100"
             >
               <div className="flex items-center space-x-3">
@@ -128,7 +128,7 @@ const ProfileScreen = () => {
               <span className="text-gray-400">→</span>
             </Link>
             <Link
-              href="/profile/payment"
+              href="/en-desarrollo"
               className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100"
             >
               <div className="flex items-center space-x-3">
