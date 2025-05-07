@@ -1,6 +1,12 @@
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-import ProfileScreen from '@/componentes/ProfileScreen';
+export default function Perfil() {
+  const router = useRouter();
 
-export default function ProfilePage() {
-  return <ProfileScreen />;
+  useEffect(() => {
+    router.push('/en-construccion');
+  }, []);
+
+  return null;
 } 
