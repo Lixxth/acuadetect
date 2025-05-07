@@ -1,11 +1,11 @@
 {
-    "theme_color": "#B8F6FF",
-    "background_color": "#B8F6FF",
+    "theme_color": "#0066cc",
+    "background_color": "#0066cc",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "Nmad",
-    "short_name": "Nmad",
+    "name": "Leacktracking",
+    "short_name": "Leacktracking",
     "icons": [
         {
             "src": "/icon-192x192.png",
