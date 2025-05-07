@@ -1,12 +1,5 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import HomeScreen from '@/componentes/HomeScreen';
 
-export default function JuegosyConsejos() {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.push('/en-construccion');
-  }, []);
-
-  return null;
-}  
+export default function Home() {
+  return <HomeScreen />;
+}

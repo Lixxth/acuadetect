@@ -4,17 +4,15 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import GameAccessModal from "./GameAccessModal";
 import GamesSection from "./GamesSection";
-import { PlusCircleIcon, DropletIcon, HomeIcon, BarChart2Icon, UserIcon } from "lucide-react"; // Si usas 'lucide-react' para los iconos
+import { PlusCircleIcon, DropletIcon, HomeIcon, BarChart2Icon, UserIcon } from "lucide-react";
 import { GoFileDirectory } from "react-icons/go";
 
 const HomeScreen = () => {
   const { data: session } = useSession();
   const userName = session?.user?.name || "Usuario";
-  const [showGameModal, setShowGameModal] = useState(false);
-  const [showGames, setShowGames] = useState(false);
-  const [carouselIndex, setCarouselIndex] = useState(0); // Controlar el índice del carrusel
+  const [showGames, setShowGames] = useState(true);
+  const [carouselIndex, setCarouselIndex] = useState(0);
 
   const carouselData = [
     {
@@ -45,12 +43,8 @@ const HomeScreen = () => {
   // Cambiar el carrusel automáticamente cada 4 segundos
   useEffect(() => {
     const interval = setInterval(nextSlide, 4000);
-    return () => clearInterval(interval); // Limpiar intervalo al desmontar
+    return () => clearInterval(interval);
   }, []);
-
-  const handleGameAccess = () => {
-    setShowGames(true);
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -85,22 +79,9 @@ const HomeScreen = () => {
           </span>
         </div>
       </div>
+
       {/* Games section */}
-      {!showGames ? (
-        <div className="mx-4 my-6">
-          <h1 className="text-lg mb-4 flex items-center justify-normal">
-            Esperando servicio de plomeria?
-          </h1>
-          <button
-            onClick={() => setShowGameModal(true)}
-            className="w-full  bg-blue-600 text-white font-bold hover:bg-blue-700 transition duration-200 shadow-md  py-4 px-6 rounded-lg "
-          >
-            🎮Jugar Ahora
-          </button>
-        </div>
-      ) : (
-        <GamesSection />
-      )}
+      <GamesSection />
 
       {/* Water Saving Carousel */}
       <section className="mx-4 my-6">
@@ -153,13 +134,6 @@ const HomeScreen = () => {
           </button>
         </Link>
       </nav>
-
-      {/* Game Access Modal */}
-      <GameAccessModal
-        isOpen={showGameModal}
-        onClose={() => setShowGameModal(false)}
-        onAccessGranted={handleGameAccess}
-      />
     </div>
   );
 };

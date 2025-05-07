@@ -18,9 +18,9 @@ export default function Inicio() {
   return (
     <main className={`${inter.className} bg-white min-h-screen flex flex-col justify-between`}>
       <NextSeo
-        title="Inicio | AquaDetect"
+        title="Inicio | LeakTracking"
         description="Plataforma de monitoreo de fugas de agua"
-        canonical="https://www.AquaDetect.com/"
+        canonical="https://www.LeakTracking.com/"
       />
 
       {/* Encabezado */}
@@ -28,7 +28,7 @@ export default function Inicio() {
         <header className="bg-gradient-to-r from-blue-600 to-cyan-500 p-4 text-white flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Image src="/leakT.png" alt="Logo" width={40} height={40} />
-            <h1 className="text-xl font-bold ml-10 sm:text-lg">AquaDetect</h1>
+            <h1 className="text-xl font-bold ml-10 sm:text-lg">LeakTracking</h1>
           </div>
         </header>
       </div>
